@@ -6,36 +6,42 @@ public class Swiggy {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n\n");
-        System.out.println("\t***********************");
-        System.out.println("\t|  WELCOME TO PORTAL  |");
-        System.out.println("\t***********************");
-        System.out.println("\t|  1. SWIGGY           |");
-        System.out.println("\t|---------------------|");
+        System.out.println("\t************************");
+        System.out.println("\t|  WELCOME TO PORTAL   |");
+        System.out.println("\t************************");
+        System.out.println("\t|  1. About us         |");
+        System.out.println("\t|----------------------|");
         System.out.println("\t|  2. USER REGISTRATION|");
-        System.out.println("\t|---------------------|");
-        System.out.println("\t|  3. HISTORY OF JAVA |");
-        System.out.println("\t|---------------------|");
-        System.out.println("\t|  4. ABOUT US        |");
-        System.out.println("\t|---------------------|");
-        System.out.println("\t|  5. EXIT            |");
-        System.out.println("\t***********************");
+        System.out.println("\t|----------------------|");
+        System.out.println("\t|  3. Swiggy           |");
+        System.out.println("\t|----------------------|");
+        System.out.println("\t|  4. Feedback         |");
+        System.out.println("\t|----------------------|");
+        System.out.println("\t|  5. EXIT             |");
+        System.out.println("\t************************");
 
         System.out.print(" \n\tEnter your choice No:  ");
         int choice = scanner.nextInt();
 
         switch (choice) {
             case 1:
-                showSwiggyMenu(scanner);
-                break;
+            System.out.println("\n\n\tAbout Us: Swiggy is India's largest and most valuable online food ordering and delivery platform. With a presence in over 500 cities, we connect millions of foodies with their favorite restaurants every day.");
+            break;
             case 2:
                 userRegistration(scanner);
                 break;
             case 3:
-                System.out.println("\n\n\tHistory of Java: Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.");
-                break;
+            showSwiggyMenu(scanner);
+            break;
             case 4:
-                System.out.println("\n\n\tAbout Us: Swiggy is India's largest and most valuable online food ordering and delivery platform. With a presence in over 500 cities, we connect millions of foodies with their favorite restaurants every day.");
-                break;
+            System.out.println("\t\t*  Thanks for your Time. Feedback please!  *");
+            String presstime = scanner.nextLine();
+            String feedback = scanner.nextLine();
+            System.out.println("\t\t**********************************************************************");
+            System.out.println("\t\t|Here your FEEDBACK\n\t\t|"+ feedback + "\n\t\t|We take it, Thank you once again!  |");
+            System.out.println("\t\t**********************************************************************");
+            break;
+
             case 5:
                 System.out.println("\n\n");
                 System.out.println("\t\t****************");
@@ -130,7 +136,11 @@ public class Swiggy {
         }
     }
 
-    private static int generateOTP() {
+    private static void foodorder(Scanner scanner){
+
+        System.err.println("GIVe the order");
+    }
+    public static int generateOTP() {
         double res = Math.random() * 999 + 999;
         return (int) res;
     }
