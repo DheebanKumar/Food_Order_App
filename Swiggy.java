@@ -140,7 +140,7 @@ public class Swiggy {
 
         System.err.println("GIVe the order");
     }
-    public static int generateOTP() {
+    private static int generateOTP() {
         double res = Math.random() * 999 + 999;
         return (int) res;
     }
